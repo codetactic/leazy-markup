@@ -1,0 +1,440 @@
+:root {
+    /** Colors **/
+    --primary-color: #2EA9B2;
+    --light-primary-color: #34C4CE;
+    --light-color: #d9d9d9;
+    --title-dark-color: #3C4048;
+    --button-color: #3C4048;
+    
+
+    --dark-color: #3C4048;
+    --strong-dark-color: #262B34;
+
+    /** Fonts **/
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/** Basis **/
+
+.wrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 1158px;
+}
+.wrapper-md {
+    margin: auto;
+    width: 100%;
+    max-width: 930px;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 60px;
+    font-family: var(--primary-font);
+}
+.title-3 {
+    font-weight: 900;
+    font-size: 40px;
+    font-family: var(--primary-font);
+}
+
+.title-4 {
+    font-weight: 700;
+    font-size: 35px;
+    font-family: var(--primary-font);
+}
+
+.title-5 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+.text {
+    line-height: 30px;
+    color: #000000;
+    font-family: var(--primary-font);
+}
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.button {
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color:var(--button-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    border-radius: 100px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.submit {
+    background: var(--primary-color);
+    font-family: var(--primary-font);
+    border-radius: 100px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.input {
+    font-size: 16px;
+    color: #0A142F;
+    font-family: var(--primary-font);
+    outline: none;
+    border: none
+}
+
+/** Leazy banner **/
+
+.leazy-banner {
+    width: 100%;
+    background-color: var(--primary-color);
+    
+}
+
+.leazy-banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leazy-banner__content {
+    width: 70%;
+    margin: auto;
+}
+.leazy-banner .title {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 17px;
+}
+.leazy-banner .text {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.leazy-banner .button-wrapper {
+    margin-bottom: 40px;
+}
+
+
+/** Leazy steps **/
+
+.leazy-steps {
+    padding: 15vh 0 0 0;
+}
+
+.leazy-steps .title-3 {
+    color: var(--title-dark-color);
+    margin-bottom: 18px;
+    font-weight: 900;
+}
+
+.leazy-steps .button {
+    font-size: 12px;
+}
+.leazy-steps .text {
+   margin-bottom: 32px;
+}
+
+.leazy-steps .button-wrapper {
+    justify-content: flex-start;
+}
+
+.leazy-steps-item {
+    grid-template-columns: 1fr .1fr 1fr;
+    display: grid;
+    column-gap: 70px;
+}
+.leazy-steps-item-left,
+.leazy-steps-item-right {
+    padding-bottom: 13vh;
+}
+.leazy-steps-item-left {
+    display: flex;
+    justify-content: flex-end;
+}
+.leazy-steps-item-line {
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    position: relative;
+}
+
+.leazy-steps-item-line-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.leazy-steps-item-number-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #EAEEFF;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.leazy-steps-item-number {
+    text-transform: uppercase;
+    color: #94A5EF;
+    font-weight: 500;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: var(--secondary-font);
+}
+
+.leazy-steps-item-line-progress {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 5px;
+    position: absolute;
+    height: 100%;
+    background-color:#EAEEFF;
+    top: 5%
+}
+
+
+.leazy-steps-item.active .leazy-steps-item-line-progress,
+.leazy-steps-item.active .leazy-steps-item-number-wrapper {
+    background-color: var(--primary-color);
+}
+.leazy-steps-item.active .leazy-steps-item-number {
+    color: #fff
+}
+
+.leazy-steps-item:first-child .leazy-steps-item-line {
+    padding: 10px 0;
+    border-radius: 100px 100px 0 0;
+}
+.leazy-steps-item:last-child .leazy-steps-item-line-progress {
+    top: 0
+}
+
+
+
+/** Leazy info **/
+
+.leazy-info-1 {
+    background: var(--light-primary-color);
+    padding: 10vh 0
+}
+.leazy-info-1 .title-3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.leazy-info-1 .text {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.leazy-info-1 .button {
+    background-color: #fff;
+    color: #3C4048
+}
+
+.leazy-info-1-img {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/** Leazy plans **/ 
+
+.leazy-plans {
+    padding: 10vh 0;
+}
+
+.leazy-plans .title-3 {
+    color: var(--title-dark-color);
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.leazy-plans-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 43px;
+}
+
+.leazy-plans-item{
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 65px 60px;
+    transition: .2s ease all;
+}
+
+.leazy-plans-item:hover {
+    background-color: var(--dark-color);
+}
+.leazy-plans-item:hover *,
+.leazy-plans-item:hover .title-4 {
+    color: #ffffff;
+    fill: var(--primary-color)
+}
+
+.leazy-plans-item:hover .button {
+    background-color: #fff;
+    color: var(--dark-color)
+}
+
+.leazy-plans-item .title-4 {
+    color: var(--title-dark-color);
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.leazy-plans-price {
+    display: block;
+    font-family: var(--primary-font);
+    font-weight: 900;
+    font-size: 65px;
+    text-align: center;
+    color: var(--title-dark-color)
+}
+.leazy-plans-price-text {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+.leazy-plans-features {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.leazy-plans-features-item {
+    color: var(--title-dark-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+/** Leazy clients **/
+
+.leazy-clients {
+    padding: 10vh 0;
+    background: #F6F4FF;
+}
+
+.leazy-clients-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.leazy-clients-item {
+    text-align: center;
+}
+
+/** Leazy footer **/
+
+
+.footer {
+    padding: 10vh 0;
+    background-color: var(--strong-dark-color);
+}
+
+.footer-cols-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15%;
+    margin-bottom: 35px;
+}
+
+.footer .title-5 {
+    color: #ffffff;
+    font-family: var(--secondary-font);
+    margin-bottom: 30px;
+}
+
+.footer-list {
+    margin-bottom: 54px;
+}
+.footer-col .footer-list:last-child {
+    margin-bottom: 0;
+}
+
+.footer-list-item {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: var(--primary-font);
+    margin-bottom: 18px;
+}
+
+.footer-list-item a {
+    color: #ffffff
+}
+
+.leazy-subscription {
+    background-color: #51555d;
+    padding: 15px 20px 15px 40px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    margin-bottom: 55px;
+}
+.leazy-subscription .title-5 {
+    margin: 0;
+}
+
+.leazy-subscription-form {
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 100px;
+    display: flex;
+    
+    flex:auto
+}
+.leazy-subscription-form .input {
+    flex: auto
+}
+
+
+.footer .text {
+    color: #fff;
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 14px;
+}
+.footer-social-item a{
+    border-radius: 100px;
+    border: 1px solid #51555d;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
